@@ -4,97 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lottery Ticket</title>
+    <title>Lottery Site</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h1>Lottery Tickets</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="upcoming.html">Upcoming</a>
+            <a href="results.html">Results</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
 
-    <!-- navigation -->
+    <!-- Home Page Content -->
+    <div class="container" id="home-page">
+        <!-- Previous Result Section as Centered Card -->
+        <section class="result-box card-center">
+            <h2>Previous Result</h2>
+            <p><strong>Date:</strong> 27- OCT- 2024 : 12:00 PM (IST)</p>
+            <p><strong>Lottery Number:</strong> FM2415</p>
+            <p><strong>Reward:</strong> ₹ 249</p>
+            <p><strong>Coupon Type:</strong> Platinum Coupon</p>
+        </section>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Lottery Tickets</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Running</a>
-                    <a class="nav-link" href="#">Results</a>
-                    <a class="nav-link disabled" aria-disabled="true">Contact US</a>
+        <!-- Upcoming Lottery Tickets with Timer -->
+        <section class="upcoming-lottery">
+            <h2>Best-Selling Coupons <span class="live-popup">Live</span></h2>
+            <div class="timer">
+                <p>Sale ends in: <span id="countdown"></span></p>
+            </div>
+
+            <div class="coupon-row">
+                <div class="coupon-card platinum">
+                    <p class="big-reward">Win ₹ 249</p>
+                    <h3>Platinum Coupon</h3>
+                    <p><strong>Package Price:</strong> ₹ 69</p>
+                </div>
+                <div class="coupon-card gold">
+                    <p class="big-reward">Win ₹ 99</p>
+                    <h3>Gold Coupon</h3>
+                    <p><strong>Package Price:</strong> ₹ 29</p>
+                </div>
+                <div class="coupon-card silver">
+                    <p class="big-reward">Win ₹ 49</p>
+                    <h3>Silver Coupon</h3>
+                    <p><strong>Package Price:</strong> ₹ 9</p>
                 </div>
             </div>
-        </div>
-    </nav>
 
-    <!-- Prevoius Result -->
-    <div>
-        <h2>Result</h2>
-        <hr>
-        <div class="result">
-            <h3>Lottery Number: FM2415</h3>
-            <h2>Reward 249</h2>
-            <h3>Platinum Coupon</h3>
-        </div>
-    </div>
-    <hr>
-
-    <!-- Lottery coupon -->
-    <h2 class="h2-coupon">Best-Selling Coupons
-    </h2>
-    <hr>
-
-    <div class="Coupons">
-        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">Silver Coupon</div>
-            <div class="card-body">
-                <h5 class="card-title">Reward: ₹ 49
-                </h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <button type="button" class="btn btn-primary">Buy: ₹ 9
-                </button>
-
+            <!-- Get Your Coupon Button -->
+            <div class="button-container">
+                <a href="https://t.me/Vishal_1909" class="get-coupon-button" target="_blank">
+                    Get Your Coupon from Our Verified Broker
+                </a>
             </div>
-        </div>
-        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">Gold Coupon
+        </section>
 
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Reward: ₹ 99
-                </h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <button type="button" class="btn btn-primary">Buy: ₹ 49
+        <!-- Add Space Before How to Buy Section -->
+        <div class="space"></div>
 
-                </button>
-
-            </div>
-        </div>
-        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">Platinum Coupon
-
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Reward: ₹ 249
-                </h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <button type="button" class="btn btn-primary">Buy: ₹ 99
-
-                </button>
-
-            </div>
-        </div>
+        <!-- How to Buy Process with Bullet Points -->
+        <section class="buy-process">
+            <h2>How to Buy Lottery Tickets</h2>
+            <ul class="buy-steps">
+                <li><strong>Contact:</strong> Reach out to the broker on <a href="https://t.me/Vishal_1909"
+                        target="_blank">Telegram</a>.</li>
+                <li><strong>Message:</strong> Send a message with your name and desired package.</li>
+                <li><strong>Payment:</strong> Make the payment as instructed by the broker.</li>
+                <li><strong>Wait:</strong> Keep an eye on the website for lottery results.</li>
+                <li><strong>Claim:</strong> If your coupon code matches, the broker will contact you to transfer your
+                    reward via UPI.</li>
+            </ul>
+        </section>
     </div>
 
+    <script>
+        // Countdown Timer
+        const countdownElement = document.getElementById("countdown");
 
+        function updateCountdown() {
+            const now = new Date();
+            const nextNoon = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 12, 0, 0);
+            const timeDiff = nextNoon - now;
+
+            if (timeDiff <= 0) {
+                countdownElement.innerHTML = "Expired";
+                return;
+            }
+
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately
+    </script>
 </body>
 
 </html>
