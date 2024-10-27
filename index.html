@@ -25,10 +25,10 @@
         <!-- Previous Result Section as Centered Card -->
         <section class="result-box card-center">
             <h2>Previous Result</h2>
-            <p><strong>Date:</strong> 27- OCT- 2024 : 12:00 PM (IST)</p>
-            <p><strong>Lottery Number:</strong> FM2415</p>
-            <p><strong>Reward:</strong> ₹ 249</p>
-            <p><strong>Coupon Type:</strong> Platinum Coupon</p>
+            <p><strong>Date:</strong> <span id="result-date">Loading...</span></p>
+            <p><strong>Lottery Number:</strong> <span id="lottery-number">Loading...</span></p>
+            <p><strong>Reward:</strong> <span id="reward">Loading...</span></p>
+            <p><strong>Coupon Type:</strong> <span id="coupon-type">Loading...</span></p>
         </section>
 
         <!-- Upcoming Lottery Tickets with Timer -->
@@ -56,56 +56,36 @@
                 </div>
             </div>
 
-            <!-- Get Your Coupon Button -->
+            <!-- Buy Coupon Button -->
             <div class="button-container">
-                <a href="https://t.me/Vishal_1909" class="get-coupon-button" target="_blank">
-                    Get Your Coupon from Our Verified Broker
+                <a href="https://t.me/Vishal_1909" class="buy-coupon-button" target="_blank">
+                    Buy Coupon
                 </a>
             </div>
-        </section>
 
-        <!-- Add Space Before How to Buy Section -->
-        <div class="space"></div>
 
-        <!-- How to Buy Process with Bullet Points -->
-        <section class="buy-process">
-            <h2>How to Buy Lottery Tickets</h2>
-            <ul class="buy-steps">
-                <li><strong>Contact:</strong> Reach out to the broker on <a href="https://t.me/Vishal_1909"
-                        target="_blank">Telegram</a>.</li>
-                <li><strong>Message:</strong> Send a message with your name and desired package.</li>
-                <li><strong>Payment:</strong> Make the payment as instructed by the broker.</li>
-                <li><strong>Wait:</strong> Keep an eye on the website for lottery results.</li>
-                <li><strong>Claim:</strong> If your coupon code matches, the broker will contact you to transfer your
-                    reward via UPI.</li>
-            </ul>
-        </section>
+            <!-- Add Space Before How to Buy Section -->
+            <div class="space"></div>
+
+            <!-- How to Buy Process with Bullet Points -->
+            <section class="buy-process">
+                <h2>How to Buy Lottery Tickets</h2>
+                <ul class="buy-steps">
+                    <li><strong>Contact:</strong> Reach out to the broker on <a href="https://t.me/Vishal_1909"
+                            target="_blank">Telegram</a>.</li>
+                    <li><strong>Message:</strong> Send a message with your name and desired package.</li>
+                    <li><strong>Payment:</strong> Make the payment as instructed by the broker.</li>
+                    <li><strong>Receive Coupon Code:</strong> Once payment is successfully made, the broker will send
+                        your coupon code within 15 minutes.</li>
+                    <li><strong>Wait:</strong> Keep an eye on the website for lottery results.</li>
+                    <li><strong>Claim:</strong> If your coupon code matches, the broker will contact you to transfer
+                        your reward via UPI.</li>
+                </ul>
+            </section>
+
     </div>
 
-    <script>
-        // Countdown Timer
-        const countdownElement = document.getElementById("countdown");
-
-        function updateCountdown() {
-            const now = new Date();
-            const nextNoon = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 12, 0, 0);
-            const timeDiff = nextNoon - now;
-
-            if (timeDiff <= 0) {
-                countdownElement.innerHTML = "Expired";
-                return;
-            }
-
-            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-            countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
