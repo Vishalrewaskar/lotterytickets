@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,6 +11,7 @@ body {
     color: #333;
 }
 
+/* Navbar */
 .navbar {
     background-color: #333;
     color: white;
@@ -32,8 +34,10 @@ body {
     text-decoration: underline;
 }
 
+/* Main Container */
 .container {
     max-width: 800px;
+    width: 95%;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -41,7 +45,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Centered Card for Previous Result */
+/* Previous Result Card */
 .card-center {
     text-align: center;
     background-color: #f0f8ff;
@@ -71,7 +75,7 @@ body {
     margin: 10px 0 20px;
 }
 
-/* Live Popup Button */
+/* Live Popup */
 .live-popup {
     color: red;
     font-weight: bold;
@@ -92,58 +96,129 @@ body {
 .coupon-row {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
-    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    flex-wrap: wrap; /* Responsive wrap */
+    gap: 15px; /* Space between cards */
 }
 
 .coupon-card {
     background-color: #f0f0f0;
-    padding: 30px; /* Increased padding for better appearance */
-    margin: 10px; /* Added margin */
+    padding: 30px;
+    margin: 10px;
     border-radius: 8px;
     border-left: 5px solid #004d4d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 250px; /* Flexible width for responsiveness */
-    text-align: center; /* Center text inside cards */
-    transition: transform 0.3s, background-color 0.3s; /* Added hover animation */
+    flex: 1 1 250px; /* Flexible width */
+    max-width: 300px; /* Max width for larger screens */
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .coupon-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    background-color: #e6e6e6; /* Slightly darker background on hover */
+    transform: translateY(-5px);
+    background-color: #e6e6e6;
 }
 
 .coupon-card .big-reward {
-    font-size: 32px; /* Increased font size for rewards */
-    color: #b22222; /* Reward color */
-    margin-bottom: 10px; /* Space below reward */
-    font-weight: bold; /* Bold font for emphasis */
+    font-size: 32px;
+    color: #b22222;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .coupon-card h3 {
-    font-size: 24px; /* Increased font size for coupon name */
+    font-size: 24px;
     color: #004d4d;
     margin-bottom: 5px;
 }
 
 .coupon-card p {
-    font-size: 18px; /* Increased font size for package price */
+    font-size: 18px;
     color: #333;
-    font-weight: bold; /* Bold font for package price */
+    font-weight: bold;
+}
+
+/* Buy Coupon Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buy-coupon-button {
+    display: inline-block;
+    width: 80%; /* Wide button */
+    max-width: 400px; /* Limit width on larger screens */
+    background-color: #007bff;
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.buy-coupon-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
 }
 
 /* Space between sections */
 .space {
-    margin: 30px 0; /* Added space between sections */
+    margin: 30px 0;
 }
 
 /* Buy Process Section */
 .buy-process {
-    background-color: #e0f7fa; /* Light blue background */
+    background-color: #e0f7fa;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .buy-process h2 {
-    color: #00796
+    color: #00796b;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.buy-steps {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.buy-steps li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar nav a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+    .coupon-card h3, .big-reward {
+        font-size: 22px;
+    }
+
+    .timer {
+        font-size: 18px;
+    }
+
+    .buy-coupon-button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+
+    .buy-process, .result-box, .upcoming-lottery, .buy-steps {
+        margin: 20px 10px;
+    }
+}
