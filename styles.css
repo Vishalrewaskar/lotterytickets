@@ -1,0 +1,12 @@
+.h2-coupon{
+    margin-top: 10px;
+    font-size: x-large;
+    color: red;
+}
+
+.Coupons{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
