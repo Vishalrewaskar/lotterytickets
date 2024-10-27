@@ -1,12 +1,149 @@
-.h2-coupon{
-    margin-top: 10px;
-    font-size: x-large;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.navbar nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.navbar nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centered Card for Previous Result */
+.card-center {
+    text-align: center;
+    background-color: #f0f8ff;
+    border: 2px solid #008080;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 128, 128, 0.2);
+    margin-bottom: 20px;
+}
+
+.card-center h2 {
+    color: #004d4d;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-center p {
+    font-size: 16px;
+    color: #006666;
+}
+
+/* Countdown Timer */
+.timer {
+    font-size: 20px;
+    color: #b22222;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+/* Live Popup Button */
+.live-popup {
     color: red;
+    font-weight: bold;
+    margin-left: 10px;
+    animation: blink 1s infinite;
 }
 
-.Coupons{
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Coupon Cards */
+.coupon-row {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
 }
 
+.coupon-card {
+    background-color: #f0f0f0;
+    padding: 30px; /* Increased padding for better appearance */
+    margin: 10px; /* Added margin */
+    border-radius: 8px;
+    border-left: 5px solid #004d4d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 250px; /* Flexible width for responsiveness */
+    text-align: center; /* Center text inside cards */
+    transition: transform 0.3s, background-color 0.3s; /* Added hover animation */
+}
+
+.coupon-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    background-color: #e6e6e6; /* Slightly darker background on hover */
+}
+
+.coupon-card .big-reward {
+    font-size: 32px; /* Increased font size for rewards */
+    color: #b22222; /* Reward color */
+    margin-bottom: 10px; /* Space below reward */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+.coupon-card h3 {
+    font-size: 24px; /* Increased font size for coupon name */
+    color: #004d4d;
+    margin-bottom: 5px;
+}
+
+.coupon-card p {
+    font-size: 18px; /* Increased font size for package price */
+    color: #333;
+    font-weight: bold; /* Bold font for package price */
+}
+
+/* Space between sections */
+.space {
+    margin: 30px 0; /* Added space between sections */
+}
+
+/* Buy Process Section */
+.buy-process {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buy-process h2 {
+    color: #00796
